@@ -50,7 +50,7 @@ app.post('/check-repo', async (req, res) => {
         const packages = Object.keys(response.data.dependencies || {});
         
         // Simulating a check for malicious packages
-        const maliciousPackages = packages.filter(pkg => pkg.includes('malicious')); // Replace this logic with your real check
+        const maliciousPackages = packages.filter(pkg => pkg.includes('malicious'));
         const result = {
             owner,
             repo,
